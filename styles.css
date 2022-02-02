@@ -1,3 +1,21 @@
-div {
-    color: blue;
+body {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+
+
+#footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 56px;
+    width: calc(100vw - 190px);
+    padding: 0 95px;
+    color: white;
+    background-color: #EF722E;
+}
+#copyright {
+    font-size: 10px;
 }
