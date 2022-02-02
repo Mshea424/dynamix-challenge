@@ -25,21 +25,24 @@
     </div>
     <div id="contact">
         <div id="contact-form-wrapper">
-            <form id="contact-form">
+            <form id="contact-form" action="">
                 <div class="input-line">
                     <input 
                         class="input-half-width" 
                         type="text" 
                         id="name" 
                         name="name" 
-                        placeholder="NAME*"
+                        placeholder="NAME *"
+                        required
                     />
+                    <input type="hidden" id="custId" name="custId" value="3487"/>
                     <input 
                         class="input-half-width" 
                         type="tel" 
                         id="phone" 
                         name="phone" 
-                        placeholder="PHONE*"
+                        placeholder="PHONE *"
+                        required
                     />
                 </div>
                 <div class="input-line">
@@ -48,11 +51,14 @@
                         type="email" 
                         id="email" 
                         name="email" 
-                        placeholder="EMAIL*"
+                        placeholder="EMAIL *"
+                        required
                     />
                     <input 
                         class="input-half-width" 
                         type="number" 
+                        min="1"
+                        max="99999999999999999999"
                         id="employees" 
                         name="employees" 
                         placeholder="# OF EMPLOYEES"
@@ -71,6 +77,7 @@
                         type="radio" 
                         id="subscribe-input" 
                         name="subscribe" 
+                        value="subscribe"
                     />
                     <label for="subscribe-input">Sign up for our newsletter!</label>
                 </div>
