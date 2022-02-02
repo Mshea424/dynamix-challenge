@@ -1,9 +1,31 @@
-body {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-family: 'Open Sans', sans-serif;
+:root {
+    --body-width: 100%;
+
 }
 
+body {
+    width: var(--body-width);
+    font-family: 'Barlow Condensed', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    padding: 0;
+    margin: 0 auto;
+}
 
+#content {
+    display: flex;
+    background-color: lightgrey;
+}
+
+#contact {
+    display: flex;
+    width: var(--body-width);
+    height: 600px;
+    background-color: lightgrey;
+    background-image: url('./images/bg-lines@2x.png');
+    background-size: 55% auto;
+    background-position: right bottom;
+    background-repeat: no-repeat;
+}
 
 
 #footer {
@@ -11,7 +33,7 @@ body {
     justify-content: space-between;
     align-items: center;
     height: 56px;
-    width: calc(100vw - 190px);
+    width: calc(var(--body-width) - 190px);
     padding: 0 95px;
     color: white;
     background-color: #EF722E;
@@ -19,3 +41,47 @@ body {
 #copyright {
     font-size: 10px;
 }
+
+#footer-logo {
+    height: 56px;
+    width: 100px;
+    background-image: url('./images/dynamix-logo-white@2x.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* MEDIA QUERIES BOOTSRAP BREAKPOINTS AS REFRENCE  */
+
+/* X-Small devices (portrait phones, less than 576px)
+No media query for `xs` since this is the default */
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) { }
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) { }
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { }
+
+/* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { }
+
+/* XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) { }
+
+/* XX-Large devices (larger desktops, 1500px and up) */
+@media (min-width: 1500px) {
+    :root {
+        --body-width: 1500px;
+    }
+ }
+
+
+/* XX-Large devices (larger desktops, 2000px and up)
+@media (min-width: 2000px) { 
+    :root {
+        --body-width: 2000px;
+    }
+} */
