@@ -1,5 +1,6 @@
 :root {
     --body-width: 100%;
+    --contact-form-width: 400px;
 
 }
 
@@ -13,13 +14,15 @@ body {
 
 #content {
     display: flex;
-    background-color: lightgrey;
+    width: var(--body-width);
+    height: 560px;
+    /* background-color: grey; */
 }
 
 #contact {
     display: flex;
     width: var(--body-width);
-    height: 600px;
+    height: 484px;
     background-color: lightgrey;
     background-image: url('./images/bg-lines@2x.png');
     background-size: 55% auto;
@@ -27,6 +30,35 @@ body {
     background-repeat: no-repeat;
 }
 
+#contact-form-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    width: calc(var(--body-width) * 0.5 );
+    background-color: grey;
+}
+
+#contact-form {
+    /* display: flex; */
+    background-color: blue;
+    width: var(--contact-form-width);
+    height: 100%;
+}
+
+.input-line {
+    display: flex;
+    justify-content: space-between;
+}
+
+#comments-line {
+    display: flex;
+    flex-direction: column;
+    align-items: bottom;
+}
+
+#submit-line {
+    display: flex;
+
+}
 
 #footer {
     display: flex;
