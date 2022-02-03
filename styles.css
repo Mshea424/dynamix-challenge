@@ -1,6 +1,6 @@
 :root {
     --body-width: 100%;
-    --contact-width: calc(var(--body-width) - 100px);
+    --contact-width: calc(var(--body-width) - 200px);
     --contact-form-width: 400px;
 
 }
@@ -50,9 +50,9 @@ body {
 
 #contact {
     display: flex;
-    width: calc(var(--body-width) - 100px);
+    width: var(--contact-width);
     height: 484px;
-    padding: 50px;
+    padding: 50px 100px;
     background-color: lightgrey;
     background-image: url('./images/bg-lines@2x.png');
     background-size: 55% auto;
@@ -64,6 +64,45 @@ body {
     display: flex;
     justify-content: flex-end;
     width: calc(var(--contact-width) * 0.5 );
+    position: relative;
+    background-color:antiquewhite;
+}
+
+#nav-to-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 16px;
+    height: 152px;
+    text-decoration: none;
+    color: black;
+}
+
+#nav-to-top:hover {
+    color: #EF722E;
+}
+
+#nav-text {
+    display: block;
+    width: 85px;
+    height: 16px;
+    font-size: 16px;
+    line-height: 16px;
+    text-align: right;
+    transform: translateY(40px) rotate(90deg);
+}
+
+#nav-arrow {
+    width: 16px;
+    height: 60px;
+    background-image: url('./images/icon-arrow_down.svg');
+    background-size: contain;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    transform: rotate(180deg);
 }
 
 #contact-form {
