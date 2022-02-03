@@ -53,11 +53,11 @@ body {
     width: var(--contact-width);
     height: 484px;
     padding: 50px 100px;
-    background-color: lightgrey;
     background-image: url('./images/bg-lines@2x.png');
     background-size: 55% auto;
     background-position: right bottom;
     background-repeat: no-repeat;
+    /* background-color: lightgrey; */
 }
 
 #contact-form-wrapper {
@@ -65,7 +65,7 @@ body {
     justify-content: flex-end;
     width: calc(var(--contact-width) * 0.5 );
     position: relative;
-    background-color:antiquewhite;
+    /* background-color:antiquewhite; */
 }
 
 #nav-to-top {
@@ -232,6 +232,7 @@ label {
     background-size: 80%;
     background-position: center;
     background-repeat: no-repeat;
+    background-color: transparent;
 }
 
 #indicator {
