@@ -54,15 +54,19 @@
                         placeholder="EMAIL *"
                         required
                     />
-                    <input 
-                        class="input-half-width" 
-                        type="number" 
-                        min="1"
-                        max="99999999999999999999"
-                        id="employees" 
-                        name="employees" 
-                        placeholder="# OF EMPLOYEES"
-                    />
+                    <div id="custom-select" class="input-half-width">
+                        <select 
+                            id="employees" 
+                            name="employees" 
+                        >
+                            <option value="" disabled selected># OF EMPLOYEES</option>
+                            <option value="1-5">1-5</option>
+                            <option value="6-30">6-30</option>
+                            <option value="31-100">31-100</option>
+                            <option value="101-250">101-250</option>
+                            <option value="251+">251+</option>
+                        </select>
+                    </div>
                 </div>
                 <div id="comments-line">
                     <label for="comments">COMMENTS</label>

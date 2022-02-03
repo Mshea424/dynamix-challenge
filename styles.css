@@ -86,6 +86,50 @@ body {
     color: black;
 }
 
+#employees { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -o-appearance: none;
+    position: absolute;
+    z-index: 1;
+    appearance: none;
+    height: 35px;
+    width: calc((var(--contact-form-width) * 0.5) - 24px);
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+#custom-select {
+    height: 35px;
+    background-color: transparent;
+    position: relative;
+}
+
+#custom-select::before {
+    content: "";
+    position: absolute;
+    width: 48px;
+    height: 21px;
+    bottom: 7px;
+    right: 0;
+    border-left: 1px solid black;
+    background-image: url('./images/chevron-down-solid.svg');
+    background-position-x: 16px;
+    background-position-y: center;
+    background-size: 15px;
+    background-repeat: no-repeat;
+    background-color: transparent;
+}
+
+#custom-select:focus-within {
+    border-bottom: 1px solid #EF722E;
+}
+
+select::-ms-expand {
+    display: none; /* Hide the default arrow in Internet Explorer 10 and Internet Explorer 11 */
+}
+
 #comments-line {
     display: flex;
     flex-direction: column;
