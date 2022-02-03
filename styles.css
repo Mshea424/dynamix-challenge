@@ -210,11 +210,16 @@ label {
     width: 12px;
     border: 1px solid black;
     margin-right: 8px;
+    cursor: pointer;
 }
 
 #subscription-line > input:checked {
     background-color: #EF722E;
     border: 1px solid #EF722E;
+}
+
+#subscription-line > label {
+    cursor: pointer;
 }
 
 
@@ -247,6 +252,19 @@ label {
     width: calc((var(--contact-width) * 0.5 ) - 128px);
     padding: 48px 64px;
     background-color: lightgrey;
+}
+
+#contact-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 30px;
+    color: #EF722E;
+    font-weight: 700;
+}
+
+#contact-subtitle {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 30px;
+    color: #EF722E;
 }
 
 #footer {
