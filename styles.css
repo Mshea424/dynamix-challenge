@@ -1,5 +1,6 @@
 :root {
     --body-width: 100%;
+    --contact-width: calc(var(--body-width) - 100px);
     --contact-form-width: 400px;
 
 }
@@ -19,7 +20,7 @@
   color: black;
 }
 
-input:focus, textarea:focus, select:focus{
+input:focus, textarea:focus, select:focus, textarea:focus {
     outline: none;
     border-bottom: 1px solid orange;
 }
@@ -28,12 +29,8 @@ input:focus::placeholder {
     color: transparent;
   }
 
-  input:-webkit-autofill,
-  input:-webkit-autofill:hover, 
-  input:-webkit-autofill:focus, 
-  input:-webkit-autofill:active{
-        box-shadow: transparent !important;
-      -webkit-box-shadow: transparent !important;
+  textarea {
+    resize: none;
   }
 
 body {
@@ -53,8 +50,9 @@ body {
 
 #contact {
     display: flex;
-    width: var(--body-width);
+    width: calc(var(--body-width) - 100px);
     height: 484px;
+    padding: 50px;
     background-color: lightgrey;
     background-image: url('./images/bg-lines@2x.png');
     background-size: 55% auto;
@@ -65,13 +63,10 @@ body {
 #contact-form-wrapper {
     display: flex;
     justify-content: flex-end;
-    width: calc(var(--body-width) * 0.5 );
-    background-color: grey;
+    width: calc(var(--contact-width) * 0.5 );
 }
 
 #contact-form {
-    /* display: flex; */
-    background-color: white;
     width: var(--contact-form-width);
     height: 100%;
 }
@@ -82,14 +77,13 @@ body {
 }
 
 .input-half-width {
-    height: 36px;
+    height: 32px;
     width: calc((var(--contact-form-width) * 0.5) - 24px);
-    margin: 12px 0;
+    margin: 14px 0;
     border: none;
     border-bottom: 1px solid black;
-    font-size: 12px;
+    font-size: 14px;
     color: black;
-    background-color: transparent;
 }
 
 #comments-line {
@@ -98,9 +92,76 @@ body {
     align-items: bottom;
 }
 
+label {
+    height: 32px;
+    line-height: 32px;
+    font-size: 14;
+}
+
+#comments {
+    border: none;
+    border-bottom: 1px solid black;
+    height: 45px;
+    font-size: 14px;
+    color: black;
+    font-family: 'Open Sans', sans-serif;
+}
+
+#comments:focus {
+    border-bottom: 1px solid #EF722E;  
+}
+
+#subscription-line {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+
+#subscription-line > input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    height: 12px;
+    width: 12px;
+    border: 1px solid black;
+    margin-right: 8px;
+}
+
+#subscription-line > input:checked {
+    background-color: #EF722E;
+    border: 1px solid #EF722E;
+}
+
+
 #submit-line {
     display: flex;
+    align-items: flex-end;
+}
 
+#submit {
+    height: 48px;
+    width: 48px;
+    border: 1px solid #EF722E;
+    margin-right: 40px;
+    cursor: pointer;
+    background-image: url('./images/icon-arrow_orange.svg');
+    background-size: 80%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#indicator {
+    line-height: 30px;
+}
+
+#contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: bottom;
+    background-color: grey;
+    width: calc((var(--contact-width) * 0.5 ) - 128px);
+    padding: 48px 64px;
 }
 
 #footer {
