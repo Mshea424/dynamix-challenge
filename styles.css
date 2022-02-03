@@ -35,8 +35,9 @@ input:focus::placeholder {
 
 body {
     width: var(--body-width);
-    font-family: 'Barlow Condensed', sans-serif;
     font-family: 'Open Sans', sans-serif;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-family: 'Barlow', sans-serif;
     padding: 0;
     margin: 0 auto;
 }
@@ -243,9 +244,9 @@ label {
     display: flex;
     flex-direction: column;
     align-items: bottom;
-    background-color: grey;
     width: calc((var(--contact-width) * 0.5 ) - 128px);
     padding: 48px 64px;
+    background-color: lightgrey;
 }
 
 #footer {
