@@ -1,25 +1,15 @@
+/* CSS DYNAMIC GLOBAL VARIABLES */
 :root {
     --body-width: 100%;
-    /* --main-padding-sides: 5vw; */
     --main-padding-sides: 0;
     --main-width: calc(var(--body-width) - (var(--main-padding-sides) * 2));
-    /* --content-img-wrapper-width: 48vw; */
     --content-img-wrapper-width: 80vw;
     --content-img-wrapper-height: calc(var(--content-img-wrapper-width) * 0.7);
-    /* --content-info-width: calc(48% - 60px); */
     --content-info-width:  80vw;
     --contact-form-width: 80vw;
-    /* --contact-backdrop-width: 55%; */
     --contact-backdrop-width: 80%;
-    /* --contact-form-wrapper-width: 50%; */
     --contact-form-wrapper-width: 80vw;
-    /* --contact-info-width: calc(50% - 128px); */
-    --contact-info-width: 80vw;
-    
-        
-        
-        
-        
+    --contact-info-width: 80vw;   
 }
 
 /* OVERWRITE BROWSER DEFAULTS */
@@ -50,6 +40,8 @@ input:focus::placeholder {
     resize: none;
   }
 
+/* BODY STYLES */
+
 body {
     width: var(--body-width);
     font-family: 'Open Sans', sans-serif;
@@ -59,6 +51,8 @@ body {
     margin: 0 auto;
 }
 
+/* CONTENT SECTION STYLES */
+
 #content {
     display: flex;
     justify-content: space-around;
@@ -66,7 +60,6 @@ body {
     align-items: center;
     width: var(--main-width);
     padding: 40px var(--main-padding-sides) 50px var(--main-padding-sides);
-    background-color: lightgrey;
 }
 
 #content-img-wrapper {
@@ -74,13 +67,8 @@ body {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    /* width: 675px; */
-    /* width: 45vw; */
     width: var(--content-img-wrapper-width);
-    /* height: 470px; */
-    /* height: 31.3vw; */
     height: var(--content-img-wrapper-height);
-    background-color: antiquewhite;
 }
 
 #content-img {
@@ -112,8 +100,6 @@ body {
 #content-info {
     width: var(--content-info-width);
     padding: 40px 0 0 0;
-    /* padding: 55px 0 0 3.1vw; */
-    background-color: grey;
 }
 
 #content-title, #content-subtitle {
@@ -155,7 +141,7 @@ body {
     background-repeat: no-repeat;
 }
 
-
+/* CONTACT SECTION STYLES */
 
 #contact {
     display: flex;
@@ -168,7 +154,6 @@ body {
     background-size: var(--contact-backdrop-width) auto;
     background-position: right bottom;
     background-repeat: no-repeat;
-    background-color: lightgrey;
 }
 
 #contact-form-wrapper {
@@ -176,7 +161,6 @@ body {
     justify-content: flex-end;
     width: var(--contact-form-wrapper-width);
     position: relative;
-    background-color:antiquewhite;
 }
 
 #nav-to-top {
@@ -277,7 +261,8 @@ body {
 }
 
 select::-ms-expand {
-    display: none; /* Hide the default arrow in Internet Explorer 10 and Internet Explorer 11 */
+/* Hide the default arrow in Internet Explorer 10 and Internet Explorer 11 */
+    display: none; 
 }
 
 #comments-line {
@@ -361,9 +346,7 @@ label {
     flex-direction: column;
     align-items: flex-start;
     width: var(--contact-info-width);
-    /* padding: 48px 64px; */
     padding: 40px 0;
-    background-color: grey;
 }
 
 #contact-title, #contact-subtitle {
@@ -458,6 +441,17 @@ label {
     }
 }
 
+/* X-Small devices (Pretty much just the Galaxy fold) */
+@media (max-width: 310px) { 
+    #content-title, #content-subtitle, #contact-title, #contact-subtitle {
+        font-size: 28px;
+    }
+
+    #img-caption {
+        font-size: 4vw;
+    }
+}
+
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) { 
 
@@ -475,17 +469,11 @@ label {
 @media (min-width: 992px) { 
 
     :root {
-        /* --main-padding-sides: 0; */
         --main-padding-sides: 5vw;
-        /* --content-img-wrapper-width: 80vw; */
         --content-img-wrapper-width: 48vw;
-        /* --content-info-width:  80vw; */
         --content-info-width: calc(48% - 60px);
-        /* --contact-form-wrapper-width: 80vw; */
         --contact-form-wrapper-width: 50%;
-        /* --contact-info-width: 80vw; */
         --contact-info-width: calc(50% - 128px);
-        /* --contact-backdrop-width: 80%; */
         --contact-backdrop-width: 55%;
     }
 
@@ -495,18 +483,14 @@ label {
     }
     
     #content-info {
-        /* padding: 40px 0 0 0; */
         padding: 55px 0 0 3.1vw;
     }
 
     #contact {
-        /* flex-direction: column; */
-        /* align-items: flex-start; */
         flex-direction: row;
     }
 
     #contact-info {
-        /* padding: 40px 0; */
         padding: 48px 64px;
     }
 
