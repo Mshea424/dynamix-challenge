@@ -1,15 +1,25 @@
 :root {
     --body-width: 100%;
-    --main-padding-sides: 5vw;
+    /* --main-padding-sides: 5vw; */
+    --main-padding-sides: 0;
     --main-width: calc(var(--body-width) - (var(--main-padding-sides) * 2));
-    --content-img-wrapper-width: 48vw;
+    /* --content-img-wrapper-width: 48vw; */
+    --content-img-wrapper-width: 80vw;
     --content-img-wrapper-height: calc(var(--content-img-wrapper-width) * 0.7);
-    --content-info-width: calc(48% - 60px);
+    /* --content-info-width: calc(48% - 60px); */
+    --content-info-width:  80vw;
     --contact-form-width: 80vw;
-    --contact-backdrop-width: 55%;
-    --contact-form-wrapper-width: 50%;
-    --contact-info-width: calc(50% - 128px);
-
+    /* --contact-backdrop-width: 55%; */
+    --contact-backdrop-width: 80%;
+    /* --contact-form-wrapper-width: 50%; */
+    --contact-form-wrapper-width: 80vw;
+    /* --contact-info-width: calc(50% - 128px); */
+    --contact-info-width: 80vw;
+    
+        
+        
+        
+        
 }
 
 /* OVERWRITE BROWSER DEFAULTS */
@@ -52,8 +62,9 @@ body {
 #content {
     display: flex;
     justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
     width: var(--main-width);
-    /* height: 470px; */
     padding: 40px var(--main-padding-sides) 50px var(--main-padding-sides);
     background-color: lightgrey;
 }
@@ -100,8 +111,8 @@ body {
 
 #content-info {
     width: var(--content-info-width);
-    padding: 55px 0 0 60px;
-    padding: 55px 0 0 3.1vw;
+    padding: 40px 0 0 0;
+    /* padding: 55px 0 0 3.1vw; */
     background-color: grey;
 }
 
@@ -129,8 +140,6 @@ body {
 
 .highlight {
     color: #84B9DF;
-    /* text-decoration: underline;
-    text-decoration-style: dotted; */
 }
 
 #content-nav {
@@ -144,16 +153,16 @@ body {
     background-size: 16px;
     background-position: left;
     background-repeat: no-repeat;
-    /* background-color: antiquewhite; */
 }
 
 
 
 #contact {
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: space-around;
     width: var(--main-width);
-    /* height: 385px; */
     padding: 50px var(--main-padding-sides);
     background-image: url(./images/bg-lines@2x.png);
     background-size: var(--contact-backdrop-width) auto;
@@ -352,7 +361,8 @@ label {
     flex-direction: column;
     align-items: flex-start;
     width: var(--contact-info-width);
-    padding: 48px 64px;
+    /* padding: 48px 64px; */
+    padding: 40px 0;
     background-color: grey;
 }
 
@@ -431,7 +441,7 @@ label {
     .input-half-width, #employees {
         width: calc(var(--contact-form-width) - 5px);
     }
-    
+
     .input-line {
         flex-direction: column;
     }
@@ -461,37 +471,43 @@ label {
 
 }
 
-/* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) { }
-
-/* Large devices (desktops, 992px and less) */
-@media (max-width: 992px) { 
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
 
     :root {
-        --main-padding-sides: 0;
-        --content-img-wrapper-width: 80vw;
-        --content-info-width:  80vw;
-        --contact-form-wrapper-width: 80vw;
-        --contact-info-width: 80vw;
-        --contact-backdrop-width: 80%;
+        /* --main-padding-sides: 0; */
+        --main-padding-sides: 5vw;
+        /* --content-img-wrapper-width: 80vw; */
+        --content-img-wrapper-width: 48vw;
+        /* --content-info-width:  80vw; */
+        --content-info-width: calc(48% - 60px);
+        /* --contact-form-wrapper-width: 80vw; */
+        --contact-form-wrapper-width: 50%;
+        /* --contact-info-width: 80vw; */
+        --contact-info-width: calc(50% - 128px);
+        /* --contact-backdrop-width: 80%; */
+        --contact-backdrop-width: 55%;
     }
 
     #content {
-        flex-direction: column;
-        align-items: center;
+        flex-direction: row;
+        align-items: flex-start;
     }
     
     #content-info {
-        padding: 40px 0 0 0;
+        /* padding: 40px 0 0 0; */
+        padding: 55px 0 0 3.1vw;
     }
 
     #contact {
-        flex-direction: column;
-        align-items: center;
+        /* flex-direction: column; */
+        /* align-items: flex-start; */
+        flex-direction: row;
     }
 
     #contact-info {
-        padding: 40px 0;
+        /* padding: 40px 0; */
+        padding: 48px 64px;
     }
 
 }
