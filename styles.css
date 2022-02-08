@@ -207,7 +207,7 @@ body {
 }
 
 .input-half-width {
-    height: 32px;
+    line-height: 2rem;
     width: calc((var(--contact-form-width) * 0.5) - 24px);
     margin: 14px 0;
     border: none;
@@ -223,17 +223,22 @@ body {
     position: absolute;
     z-index: 1;
     appearance: none;
-    height: 35px;
+    line-height: 2rem;
     width: calc((var(--contact-form-width) * 0.5) - 24px);
     border: none;
     background-color: transparent;
     cursor: pointer;
 }
 
+select::-ms-expand {
+    /* Hide the default arrow in Internet Explorer 10 and Internet Explorer 11 */
+        display: none; 
+    }
+
 #custom-select {
-    height: 35px;
     background-color: transparent;
     position: relative;
+    height: 35px;
 }
 
 #custom-select::before {
@@ -245,9 +250,9 @@ body {
     right: 0;
     border-left: 1px solid black;
     background-image: url(./images/chevron-down-solid.svg);
+    background-size: 15px;
     background-position-x: 16px;
     background-position-y: center;
-    background-size: 15px;
     background-repeat: no-repeat;
     background-color: transparent;
 }
@@ -256,15 +261,11 @@ body {
     border-bottom: 1px solid #EF722E;
 }
 
-select::-ms-expand {
-/* Hide the default arrow in Internet Explorer 10 and Internet Explorer 11 */
-    display: none; 
-}
-
 #comments-line {
     display: flex;
     flex-direction: column;
     align-items: bottom;
+    margin-top: 25px;
 }
 
 #comments {
