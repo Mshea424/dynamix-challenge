@@ -82,13 +82,14 @@ body {
     justify-content: space-between;
     color: #B7B7B7;    
     line-height: 2.2rem;
+    white-space: nowrap;
 }
 
 #img-caption::after {
     display: block;
     content: "";
     height: calc(var(--content-img-wrapper-width) * 0.56);
-    width: calc(var(--content-img-wrapper-width) * 0.56);
+    width: 56%;
     background-image: url(./images/icon-plus.png);
     background-size: calc(var(--content-img-wrapper-width) * 0.033);
     background-position: bottom right;
@@ -418,15 +419,36 @@ address {
 
 /* MEDIA QUERIES BOOTSRAP BREAKPOINTS AS REFRENCE  */
 
-/* XX-Small devices (Pretty much just the Galaxy fold) */
-@media (max-width: 310px) { 
+/* XX-Small devices (portrait phones, less than 376px) */
+@media (max-width: 376px) { 
     #content-title, #content-subtitle, #contact-title, #contact-subtitle {
         font-size: 28px;
+    }
+
+    #content-img {
+        width: 100%;
+    }
+
+    #img-caption {
+        font-size: .5rem;
+        white-space: normal;
+    }
+
+    #img-caption::after {
+        display: none;
     }
 }
 
 /* X-Small devices (portrait phones, less than 576px) */
 @media (max-width: 576px) {
+    #img-caption {
+        font-size: .9rem;
+        /* white-space: normal; */
+    }
+
+    #img-caption::after {
+        width: 30%;
+    }
     .input-half-width, #employees {
         width: calc(var(--contact-form-width) - 5px);
     }
