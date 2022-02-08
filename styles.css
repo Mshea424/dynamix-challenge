@@ -4,7 +4,7 @@
     --main-padding-sides: 0;
     --main-width: calc(var(--body-width) - (var(--main-padding-sides) * 2));
     --content-img-wrapper-width: 80vw;
-    --content-info-width:  80vw;
+    --content-info-width: 80vw;
     --contact-form-width: 80vw;
     --contact-backdrop-width: 80%;
     --contact-form-wrapper-width: 80vw;
@@ -80,19 +80,19 @@ body {
     width: 100%;
     justify-content: space-between;
     color: #B7B7B7;    
-    line-height: 40px;
+    line-height: 2.2rem;
 }
 
 #img-caption::after {
     display: block;
     content: "";
-    height: calc(var(--content-img-wrapper-width) * 0.55);
-    width: calc(var(--content-img-wrapper-width) * 0.55);
+    height: calc(var(--content-img-wrapper-width) * 0.56);
+    width: calc(var(--content-img-wrapper-width) * 0.56);
     background-image: url(./images/icon-plus.png);
-    background-size: calc(var(--content-img-wrapper-width) * 0.032);
+    background-size: calc(var(--content-img-wrapper-width) * 0.033);
     background-position: bottom right;
     background-repeat: repeat;
-    margin-top: -46%;
+    margin-top: -47.5%;
 }
 
 #content-info {
@@ -102,13 +102,14 @@ body {
 
 #content-title, #content-subtitle {
     font-family: 'Barlow Condensed', sans-serif;
-    height: 40px;
     line-height: 40px;
     font-size: 40px;
+    margin: 0;
 }
 
 #content-title {
     color: #84B9DF;
+    font-weight: 300;
 }
 
 #content-subtitle {
@@ -118,8 +119,7 @@ body {
 
 #content-text {
     margin: 40px 0;
-    font-size: 17px;
-    line-height: 22px;
+    line-height: 1.5rem;
 }
 
 .highlight {
@@ -269,12 +269,6 @@ select::-ms-expand {
     align-items: bottom;
 }
 
-label {
-    height: 32px;
-    line-height: 32px;
-    font-size: 14;
-}
-
 #comments {
     border: none;
     border-bottom: 1px solid black;
@@ -344,35 +338,47 @@ label {
     flex-direction: column;
     align-items: flex-start;
     width: var(--contact-info-width);
+    margin: 0 auto;
     padding: 40px 0;
+    background-color: lightgrey;
 }
 
 #contact-title, #contact-subtitle {
     font-family: 'Barlow Condensed', sans-serif;
-    height: 50px;
-    line-height: 50px;
     font-size: 40px;
     color: #EF722E;
+    margin: 0;
 }
 
-#contact-title {
-    font-weight: 700;
+#contact-subtitle {
+    font-weight: 300;
+}
+
+h3 {
+    margin: 0;
+    font-size: unset;
+    font-weight: unset;
+    line-height: 22px;
 }
 
 #company-name {
     margin-top: 30px;
-    line-height: 22px;
+
 }
 
-#company-statement {
-    line-height: 22px;
+address {
+    margin-top: 20px;
+    font-style: normal;
 }
 
 .company-contact-line {
+    display: block;
     line-height: 36px;
     padding-left: 32px;
     background-position: left;
     background-repeat: no-repeat;
+    text-decoration: none;
+    color: black;
 }
 
 #company-address {
@@ -490,6 +496,7 @@ label {
 
     #contact-info {
         padding: 48px 64px;
+        align-items: flex-start;
     }
 
 }

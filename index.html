@@ -20,11 +20,11 @@
             <div id="img-caption">THIS IS A SPACE FOR IMAGE CAPTIONS</div>
         </div>
         <div id="content-info">
-            <div id="content-title">This is a sample</div>
-            <div id="content-subtitle">TITLE THAT HAS CONTENT</div>
-            <div id="content-text">
+            <h1 id="content-title">This is a sample</h1>
+            <h2 id="content-subtitle">TITLE THAT HAS CONTENT</h1>
+            <p id="content-text">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <span class="highlight">Duis aute irure dolor</span> in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
-            </div>
+            </p>
             <a href="about.html" target="blank" id="content-nav">Learn More About This Content</a>
         </div>
     </div>
@@ -36,45 +36,53 @@
             </a>
             <form id="contact-form" action="">
                 <div class="input-line">
-                    <input 
-                        class="input-half-width" 
-                        type="text" 
-                        id="name" 
-                        name="name" 
-                        placeholder="NAME *"
-                        required
-                    />
-                    <input type="hidden" id="custId" name="custId" value="3487"/>
-                    <input 
-                        class="input-half-width" 
-                        type="tel" 
-                        id="phone" 
-                        name="phone" 
-                        placeholder="PHONE *"
-                        required
-                    />
+                    <label>
+                        <input 
+                            class="input-half-width" 
+                            type="text" 
+                            id="user-name" 
+                            name="user-name" 
+                            placeholder="NAME *"
+                            required
+                        />
+                    </label>
+                    <label>
+                        <input 
+                            class="input-half-width" 
+                            type="tel" 
+                            id="phone" 
+                            name="phone" 
+                            placeholder="PHONE *"
+                            required
+                        />
+                    </label>
                 </div>
                 <div class="input-line">
-                    <input 
-                        class="input-half-width" 
-                        type="email" 
-                        id="email" 
-                        name="email" 
-                        placeholder="EMAIL *"
-                        required
-                    />
+                    <label>
+                        <input 
+                            class="input-half-width" 
+                            type="email" 
+                            id="email" 
+                            name="email" 
+                            placeholder="EMAIL *"
+                            required
+                        />
+                    </label>
                     <div id="custom-select" class="input-half-width">
-                        <select 
-                            id="employees" 
-                            name="employees" 
-                        >
-                            <option value="" disabled selected># OF EMPLOYEES</option>
-                            <option value="1-5">1-5</option>
-                            <option value="6-30">6-30</option>
-                            <option value="31-100">31-100</option>
-                            <option value="101-250">101-250</option>
-                            <option value="251+">251+</option>
-                        </select>
+                        <label>
+                            <select 
+                                id="employees" 
+                                name="employees" 
+                            >
+                                <option value="" disabled selected># OF EMPLOYEES</option>
+                                <option value="1-5">1-5</option>
+                                <option value="6-30">6-30</option>
+                                <option value="31-100">31-100</option>
+                                <option value="101-250">101-250</option>
+                                <option value="251+">251+</option>
+                            </select>
+                        </label>
+                        
                     </div>
                 </div>
                 <div id="comments-line">
@@ -93,7 +101,6 @@
                     />
                     <label for="subscribe-news">Sign up for our newsletter!</label>
                 </div>
-                
                 <div id="submit-line">
                     <input 
                         type="submit" 
@@ -106,13 +113,15 @@
             </form>
         </div>
         <div id="contact-info">
-            <div id="contact-title">STAY IN THE LOOP</div>
-            <div id="contact-subtitle">Not Out</div>
-            <div id="company-name">COMPANY NAME, LLC</div>
-            <div id="company-statement">This is what the company does</div>
-            <div class="company-contact-line" id="company-address">1122 Test Street, Atlanta, GA 30339</div>
-            <div class="company-contact-line" id="company-phone">800.555.1234</div>
-            <div class="company-contact-line" id="company-email">hello@dynamix.site</div>
+            <h1 id="contact-title">STAY IN THE LOOP</h1>
+            <h2 id="contact-subtitle">Not Out</h2>
+            <h3 id="company-name">COMPANY NAME, LLC</h3>
+            <h3 id="company-statement">This is what the company does</h3>
+            <address>
+                <div class="company-contact-line" id="company-address">1122 Test Street, Atlanta, GA 30339</div>
+                <a href="tel:8005551234" class="company-contact-line" id="company-phone">800.555.1234</a>
+                <a href="mailto:hello@dynamix.site" class="company-contact-line" id="company-email">hello@dynamix.site</a>
+            </address>
         </div>
     </div>
     <div id="footer">
