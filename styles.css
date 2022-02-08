@@ -141,6 +141,10 @@ body {
     background-repeat: no-repeat;
 }
 
+#content-nav:hover {
+    color:#84B9DF;
+}
+
 /* CONTACT SECTION STYLES */
 
 #contact {
@@ -309,6 +313,10 @@ select::-ms-expand {
     cursor: pointer;
 }
 
+#subscription-line:hover {
+    color: #EF722E;
+}
+
 #submit-line {
     margin-top: 70px;
     display: flex;
@@ -326,6 +334,10 @@ select::-ms-expand {
     background-position: center;
     background-repeat: no-repeat;
     background-color: transparent;
+}
+
+#submit:hover {
+    background-color:lightgrey;
 }
 
 #indicator {
