@@ -145,7 +145,6 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
     width: var(--main-width);
     padding: 50px var(--main-padding-sides);
     background-image: url(./images/bg-lines@2x.png);
@@ -156,7 +155,7 @@ body {
 
 #contact-form-wrapper {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     width: var(--contact-form-wrapper-width);
     position: relative;
 }
@@ -338,9 +337,7 @@ select::-ms-expand {
     flex-direction: column;
     align-items: flex-start;
     width: var(--contact-info-width);
-    margin: 0 auto;
     padding: 40px 0;
-    background-color: lightgrey;
 }
 
 #contact-title, #contact-subtitle {
@@ -423,6 +420,17 @@ address {
 
 /* MEDIA QUERIES BOOTSRAP BREAKPOINTS AS REFRENCE  */
 
+/* XX-Small devices (Pretty much just the Galaxy fold) */
+@media (max-width: 310px) { 
+    #content-title, #content-subtitle, #contact-title, #contact-subtitle {
+        font-size: 28px;
+    }
+
+    #img-caption {
+        font-size: 4vw;
+    }
+}
+
 /* X-Small devices (portrait phones, less than 576px) */
 @media (max-width: 576px) {
     .input-half-width, #employees {
@@ -445,22 +453,16 @@ address {
     }
 }
 
-/* X-Small devices (Pretty much just the Galaxy fold) */
-@media (max-width: 310px) { 
-    #content-title, #content-subtitle, #contact-title, #contact-subtitle {
-        font-size: 28px;
-    }
-
-    #img-caption {
-        font-size: 4vw;
-    }
-}
-
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) { 
 
     :root {
         --contact-form-width: 400px;
+        --contact-info-width: 400px;
+    }
+
+    #contact-info {
+        margin-top: 60px;
     }
 
     #nav-to-top {
@@ -492,9 +494,16 @@ address {
 
     #contact {
         flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-around;
+    }
+
+    #contact-form-wrapper {
+        justify-content: flex-end;
     }
 
     #contact-info {
+        margin-top: 0;
         padding: 48px 64px;
         align-items: flex-start;
     }
