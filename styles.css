@@ -199,7 +199,6 @@ body {
 
 #contact-form {
     width: var(--contact-form-width);
-    height: 100%;
 }
 
 .input-line {
@@ -271,7 +270,6 @@ select::-ms-expand {
 #comments {
     border: none;
     border-bottom: 1px solid black;
-    height: 45px;
     font-size: 14px;
     color: black;
     font-family: 'Open Sans', sans-serif;
@@ -308,7 +306,6 @@ select::-ms-expand {
     cursor: pointer;
 }
 
-
 #submit-line {
     margin-top: 70px;
     display: flex;
@@ -329,7 +326,7 @@ select::-ms-expand {
 }
 
 #indicator {
-    line-height: 30px;
+    line-height: 1.5rem;
 }
 
 #contact-info {
@@ -398,7 +395,6 @@ address {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    height: 56px;
     width: calc(100% - 190px);
     padding: 0 95px;
     color: white;
@@ -424,10 +420,6 @@ address {
 @media (max-width: 310px) { 
     #content-title, #content-subtitle, #contact-title, #contact-subtitle {
         font-size: 28px;
-    }
-
-    #img-caption {
-        font-size: 4vw;
     }
 }
 
